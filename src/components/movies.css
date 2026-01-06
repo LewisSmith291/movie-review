@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+select{
+  background: #242424;;
+  height: fit-content;
+}
+
+select:hover{
+  cursor: pointer;
+}

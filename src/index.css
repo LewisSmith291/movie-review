@@ -7,11 +7,10 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  text-align: center;
 }
+
 #root {
   padding: 2rem;
-  text-align: center;
 }
 
 
@@ -32,28 +31,44 @@ body {
 }
 
 h1 {
-  font-size: 4.2em;
+  font-size: 4.2rem;
   line-height: 1.1;
+  font-weight:bolder;
+}
+
+h2{
+  font-size: 2.5rem;
+  font-weight:bolder;
+}
+
+h3{
+  font-size:1.5rem;
+  font-weight: bold;
 }
 
 a{
   font-size: 1.7em;
   color: #ffffff;
   text-decoration: none;
-  display: block;
-  position: relative;
   padding: 0.2em 0;
 }
-
-a:hover {
+a:hover{
   color:#a0a0a0;
 }
 
-a:active{
+.hoverable{
+  display: block;
+  position: relative;
+}
+.hoverable:hover {
+  cursor: pointer;
+}
+
+.hoverable:active{
   color:#696969;
 }
 
-a::after {
+.hoverable::after {
   content:'';
   position:absolute;
   bottom:0;
@@ -68,7 +83,7 @@ a::after {
   transform-origin: center;
 }
 
-a:hover::after{
+.hoverable:hover::after{
   transform:scale(1);
 }
 
