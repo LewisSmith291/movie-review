@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Montseratt", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  text-align: center;
+}
+#root {
+  padding: 2rem;
+  text-align: center;
+}
+
+
+@font-face {
+  font-family: "Montseratt";
+  src:
+    local("Montseratt"),
+    url(..\src\assets\Montserrat-Thin.woff) format("woff");
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4.2em;
+  line-height: 1.1;
+}
+
+a{
+  font-size: 1.7em;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+a:hover {
+  color:#a0a0a0;
+}
+
+a:active{
+  color:#696969;
+}
+
+a::after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:0.15rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 100ms, transform 100ms;
+  opacity: 1;
+  transform:scale(0);
+  transform-origin: center;
+}
+
+a:hover::after{
+  transform:scale(1);
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
