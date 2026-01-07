@@ -45,6 +45,7 @@ export default function WatchMovies() {
         <Movie/>
         <Movie/>
         <Movie/>
+        <Movie/>
       </div>
     </section>
   )
