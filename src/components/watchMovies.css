@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+.movie-container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin:1vw;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+select{
+  background: #242424;;
+  height: fit-content;
+}
+
+select:hover{
+  cursor: pointer;
+}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import './movies.css'
-export default function Movies() {
+import './watchMovies.css'
+import Movie from './Movie.jsx'
+
+export default function WatchMovies() {
   const [sortDrop, setSortDrop] = useState("");
 
   const sortingChange = (event) =>{
@@ -22,8 +24,9 @@ export default function Movies() {
           <select name="sorting-category" id="sort-by" className="movie-sorting"
               onChange={sortingChange} value={sortDrop}>
             <option id="default-value" disabled value="">-Sort By-</option>
-            <option value="date">Date</option>
-            <option value="rating">Rating</option>
+            <option value="date">Release Date</option>
+            <option value="rating">Public Rating</option>
+            <option value="rating">Critic Rating</option>
           </select>
           <select name="ascending-or-descending" id="asc-desc" className="movie-sorting">
             <option value="">Ascending</option>
@@ -31,6 +34,18 @@ export default function Movies() {
           </select>
         </div>
       </header>
+      <div className="movie-container">
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+        <Movie/>
+      </div>
     </section>
   )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.css'
-import Movies from '../src/components/Movies.jsx/'
+import WatchMovies from './components/WatchMovies.jsx'
 function App() {
 
   return (
@@ -15,7 +15,7 @@ function App() {
         </ul>
       </nav>
     </header>
-    <Movies/>
+    <WatchMovies/>
     </>
   )
 }

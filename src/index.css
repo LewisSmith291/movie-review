@@ -10,7 +10,7 @@
 }
 
 #root {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
@@ -52,8 +52,9 @@ a{
   text-decoration: none;
   padding: 0.2em 0;
 }
+
 a:hover{
-  color:#a0a0a0;
+
 }
 
 .hoverable{
@@ -62,6 +63,7 @@ a:hover{
 }
 .hoverable:hover {
   cursor: pointer;
+  color:#dddddd;
 }
 
 .hoverable:active{

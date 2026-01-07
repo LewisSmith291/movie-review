@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+.movie{
+  width: fit-content;
+  overflow: hidden;
+  position: relative;
+  width:20vw;
+  margin:2vw 2vw;
+  transition: width 100ms ease, height 100ms ease, margin 100ms ease;
+}
+
+.movie:hover{
+  width:22vw;
+  margin: 0vw 1vw;
+}
+
+.movie-detail{
+  position: absolute;
+}
+
+.movie-name{
+  top: 0;
+  left: 0;
+}
+
+.movie-rating{
+  bottom: 0;
+  left: 0;
+}
+
+.movie-date{
+  left: 0;
+  bottom: 10%;
+}
+
+.movie:hover .movie-detail{
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.movie:hover .movie-img{
+  filter:sepia(30%);
+}
