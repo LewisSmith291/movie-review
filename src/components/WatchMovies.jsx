@@ -1,13 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './watchMovies.css'
 import Movie from './Movie.jsx'
 
 export default function WatchMovies() {
-  const [sortDrop, setSortDrop] = useState("");
 
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    fetchPopular();
+  },[]);
+
+  async function fetchPopular(){
+    const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=0cf6688493ea5dbc8729ce4252146b7b");
+    const data = await response.json();
+    setMovies(data.results);
+    console.log(data.results);
+  }
+
+  const [sortDrop, setSortDrop] = useState("");
   const sortingChange = (event) =>{
     setSortDrop(event.target.value);
   };
+
   return (
     <section id="movie-list">
       <header id="movie-list-headers" className="flex flex-col">
@@ -35,17 +49,9 @@ export default function WatchMovies() {
         </div>
       </header>
       <div className="movie-container">
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
-        <Movie/>
+        {movies.map((movie) => {
+          <Movie key={movie.id} movie={movie}/>
+        })}
       </div>
     </section>
   )
