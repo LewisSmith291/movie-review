@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import './Movie.css'
 
 export default function Movie({movie}) {
-  console.log(movie)
   const tmdbLink = 'https://www.themoviedb.org/movie/' + movie.id
   return (
     <a href={tmdbLink} className='movie'>
