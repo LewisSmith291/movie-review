@@ -14,7 +14,6 @@ export default function WatchMovies() {
     const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=0cf6688493ea5dbc8729ce4252146b7b");
     const data = await response.json();
     setMovies(data.results);
-    console.log(data.results);
   }
 
   const [sortDrop, setSortDrop] = useState("");
@@ -22,6 +21,9 @@ export default function WatchMovies() {
     setSortDrop(event.target.value);
   };
 
+  const movieOut = (movies.map(movie => 
+    <li><Movie key={movie.id} movie={movie}/></li>
+  ));
   return (
     <section id="movie-list">
       <header id="movie-list-headers" className="flex flex-col">
@@ -49,9 +51,7 @@ export default function WatchMovies() {
         </div>
       </header>
       <div className="movie-container">
-        {movies.map((movie) => {
-          <Movie key={movie.id} movie={movie}/>
-        })}
+        {movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
       </div>
     </section>
   )

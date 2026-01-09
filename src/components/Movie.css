@@ -28,16 +28,18 @@
 
 .movie-detail{
   position: absolute;
-  margin: 0.4vw;
+  padding: 0.2vw;
+  margin: 0.2vw;
+  border-radius: 0.5rem;
 }
 
 .movie-name{
-  top: 0;
+  top: 0.4vw;
   left: 0;
 }
 
 .movie-rating{
-  bottom: 0;
+  bottom: 0.4vw;
   left: 0;
 }
 
@@ -49,6 +51,7 @@
 .movie:hover .movie-detail{
   text-decoration: underline;
   font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .movie:hover .movie-img{
